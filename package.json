@@ -1,7 +1,7 @@
 {
   "name": "bungo-scraper",
   "productName": "bungoscraper",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Electron application bungoscraper",
   "main": "build/bungoscraper.js",
   "scripts": {
