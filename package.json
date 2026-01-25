@@ -1,0 +1,67 @@
+{
+  "name": "bungo-scraper",
+  "productName": "bungoscraper",
+  "version": "0.0.1",
+  "description": "Electron application bungoscraper",
+  "main": "build/bungoscraper.js",
+  "scripts": {
+    "build": "tsc && chcp 65001",
+    "start": "npm run build && electron .",
+    "build-win": "npm run build && electron-builder --win --x64"
+  },
+  "keywords": [
+    "scraper",
+    "bungo",
+    "book",
+    "free"
+  ],
+  "author": {
+    "name": "numthree-uchimura (https://github.com/N3-uchimura/)",
+    "email": "uchimura@numthree.net"
+  },
+  "dependencies": {
+    "@ghostery/adblocker-puppeteer": "^2.13.4",
+    "cross-fetch": "^4.1.0",
+    "csv": "^6.4.1",
+    "electron-log": "^5.4.0",
+    "iconv-lite": "^0.6.3",
+    "node-cache": "^5.1.2",
+    "puppeteer": "^24.36.0",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "electron": "^40.0.0",
+    "electron-builder": "^26.5.0"
+  },
+  "build": {
+    "appId": "net.numthree.bungoscraper",
+    "productName": "bungoscraper",
+    "files": [
+      "build/**/*",
+      "package.json",
+      "!dist/**/*",
+      "!src/**/*",
+      "!.gitignore",
+      "!.vscode"
+    ],
+    "extraResources": [
+      "assets",
+      "www/**/*"
+    ],
+    "squirrelWindows": {},
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/bungo.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "license": "MIT"
+}

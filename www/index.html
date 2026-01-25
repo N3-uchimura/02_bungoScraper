@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>文豪スクレイパー</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/button.css">
+</head>
+
+<body>
+  <h1 id="maintitle">文豪スクレイパー</h1>
+  <div class="operation_area">
+    <h3 id="scraping">スクレイピング</h3>
+    <button id="scraping_button" class="button-g button-wide" value="scraping" onclick="gotoScrape();">スクレイピング</button>
+  </div>
+  <div class="operation_area">
+    <h3 id="statushead">ステータス</h3>
+    <div id="targetpage"></div>
+    <div id="status"></div>
+  </div>
+  <div class="operation_area">
+    <button id="exit_button" class="button-g button-1 button-wide" value="exit" onclick="exitApp();">終了</button>
+  </div>
+  <footer>
+    <p><small>&copy; 2026 Nthree All Rights Reserved. </small></p>
+  </footer>
+
+  <script charset="UTF-8">
+    // doms
+    const pageDom = document.getElementById('targetpage');
+    const statusDom = document.getElementById('status');
+
+    /// ipc
+    // be ready
+    window.api.on("ready", arg => {
+    });
+
+    // update status
+    window.api.on('statusUpdate', arg => {
+      try {
+        // status
+        statusDom.innerHTML = `
+          scraping: ${arg.status}`;
+        // target
+        pageDom.innerHTML = `
+          target: ${arg.target}`;
+
+      } catch (e) {
+        // error
+        console.log(e);
+      }
+    });
+
+    // start scraping
+    const gotoScrape = () => {
+      try {
+        // file scrape
+        window.api.send('scrape');
+
+      } catch (e) {
+        // error
+        console.log(e);
+      }
+    }
+
+    // exit
+    const exitApp = () => {
+      try {
+        // exit app
+        window.api.send('exitapp');
+
+      } catch (e) {
+        // error
+        console.log(e);
+      }
+    }
+  </script>
+</body>
+
+</html>
