@@ -1,42 +1,45 @@
+<table>
+	<thead>
+    	<tr>
+      		<th style="text-align:center">English</th>
+      		<th style="text-align:center"><a href="README-ja.md">日本語</a></th>
+    	</tr>
+  	</thead>
+</table>
+
 ## name
 
-文豪スクレイパー
+bungoScraper
 
 ## Overview
 
-[bungo search](https://search.bungo.app/) からデータをスクレイピングするツールです。
+Scraping tool for [bungo search](https://search.bungo.app/) .
 
 ## Requirement
 
-Windows10 ~
+- Windows10 ~
 
 ## Setting
 
 ### From souce
 
-1. リリースから ZIP ファイルをダウンロードするか、リポジトリを pull します。
-2. コマンドプロンプトを開き、解凍したフォルダか git フォルダ内に移動します。
-   ```
-   cd C:\home
-   ```
-3. 以下のコマンドを実行します。
-
+1. Download zip or pull repository.
+2. Execute below on cmd.
    ```
    npm install
    npm start
    ```
-
-- node.js の実行環境が必要です。
+- node.js environment is required.
 
 ### From exe
 
-1. リリースから EXE ファイルをダウンロードします。
-2. ダウンロードした EXE ファイルを実行し、インストールします。
+1. Download exe file from release.
+2. DoubleClick on exe file and install.
 
 ## Usage
 
-1. 「スクレイピング」ボタンを押します。
-2. 終了すると、csv ファイルがデスクトップに保存されます。
+1. Press "Scrape" button.
+2. All finished, csv file will be on desktop.
 
 ## Author
 

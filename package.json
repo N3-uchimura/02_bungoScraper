@@ -1,8 +1,8 @@
 {
   "name": "bungo-scraper",
   "productName": "bungoscraper",
-  "version": "1.0.0",
-  "description": "Electron application bungoscraper",
+  "version": "1.0.1-alpha1",
+  "description": "application for scraping 'bungo search'",
   "main": "build/bungoscraper.js",
   "scripts": {
     "build": "tsc && chcp 65001",
@@ -28,6 +28,9 @@
     "node-cache": "^5.1.2",
     "puppeteer": "^24.36.0",
     "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "minimatch": "10.2.2"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",

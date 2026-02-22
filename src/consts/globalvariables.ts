@@ -5,7 +5,7 @@
 **/
 
 /** const */
-// default
+// consts
 export namespace myConst {
   export const DEVMODE: boolean = true;
   export const COMPANY_NAME: string = "nthree";
@@ -16,7 +16,7 @@ export namespace myConst {
   export const DEF_BUNGO_URL: string = 'https://search.bungo.app/page/';
 }
 
-// default
+// nums
 export namespace myNums {
   export const MAX_PAGE_ROWS: number = 50;
   export const WINDOW_WIDTH: number = 800;

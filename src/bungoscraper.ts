@@ -15,8 +15,8 @@ import * as path from 'node:path'; // path
 import { BrowserWindow, app, ipcMain, Tray, Menu, nativeImage } from 'electron'; // electron
 import { Scrape } from './class/ElScrape0123'; // scraper
 import ELLogger from './class/ElLogger'; // logger
-import Dialog from './class/ElDialog0721'; // dialog
-import CSV from './class/ElCsv0414'; // csvmaker
+import Dialog from './class/ElDialog1124'; // dialog
+import CSV from './class/ElCsv0126'; // csvmaker
 // log level
 const LOG_LEVEL: string = myConst.LOG_LEVEL ?? 'all';
 // loggeer instance
